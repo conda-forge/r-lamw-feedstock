@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lamW_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lamW/lamW_{{ version }}.tar.gz
-  sha256: 18895a8ad71faf0d9000260c223eb23f1a9d0cfb6f962794507d0d9cdc1bc925
+  sha256: 83ad972afe86a5eb91c14674948f23a42037253bed903aa1e85f5f49fa3c6315
 
 build:
   merge_build_host: true  # [win]
