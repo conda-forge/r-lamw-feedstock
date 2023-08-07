@@ -3,6 +3,7 @@ About r-lamw-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-lamw-feedstock/blob/main/LICENSE.txt)
 
+
 About r-lamw
 ------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/aadler/lamW
 Package license: BSD-2-Clause
 
 Summary: Implements both real-valued branches of the Lambert-W function (Corless et al, 1996) <doi:10.1007/BF02124750> without the need for installing the entire GSL.
+
 About r-lamw
 ------------
 
