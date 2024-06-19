@@ -35,12 +35,12 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - r-rcppparallel >=4.3.20
+    - r-rcppparallel
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
-    - r-rcppparallel >=4.3.20
+    - r-rcppparallel
 
 test:
   commands:
