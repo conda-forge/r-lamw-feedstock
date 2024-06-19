@@ -1,4 +1,4 @@
-{% set version = "2.2.3" %}
+{% set version = "2.2.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lamW_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lamW/lamW_{{ version }}.tar.gz
-  sha256: a1e232186673d2fc298fc45278a6ff169db428fe8a63551c9297124a05ee034b
+  sha256: 5fbf75a1996f0608097f57673c6f085c92f2a793f7740dc46eef4fd352a737c0
 
 build:
   merge_build_host: true  # [win]
   number: 0
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +23,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -33,12 +36,12 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - r-rcppparallel >=4.3.20
+    - r-rcppparallel
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
-    - r-rcppparallel >=4.3.20
+    - r-rcppparallel
 
 test:
   commands:
