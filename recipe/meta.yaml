@@ -1,4 +1,4 @@
-{% set version = "2.2.6" %}
+{% set version = "2.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lamW_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lamW/lamW_{{ version }}.tar.gz
-  sha256: a47516f3525a390527d4684792379802117d8b9ee06a6fde459d8b6e14f432fa
+  sha256: 56403a09a27afa415524e6a315fed54d1340f33faddb5e2113d78347643859f9
 
 build:
   number: 0
